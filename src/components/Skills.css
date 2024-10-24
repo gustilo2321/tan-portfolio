@@ -1,0 +1,128 @@
+/* Skills.css */
+
+.skills {
+  padding: 40px;
+  background-color: #121212;
+  color: #ffffff;
+  padding: 3rem 5rem;
+}
+
+.skills h2 {
+  font-size: 64px;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.skills-divider {
+  border: none;
+  height: 0.5px;
+  background-color: #ffffff;
+  margin: 20px 0;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Left side for both Technologies and Services */
+.left-side {
+  flex: 1; /* Change from flex-basis to flex */
+  min-width: 200px; /* Ensures a minimum width for smaller screens */
+  text-align: left;
+  padding-left: 8rem;
+  padding-top: 1rem;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Right side for Technology boxes and Service descriptions */
+.right-side {
+  flex: 3; /* Change from flex-basis to flex */
+  padding: 1rem 8rem 0 0;
+}
+
+.tech-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tech-box {
+  display: inline-block;
+  background-color: rgba(100, 25, 135, 0.5);
+  color: #ffffff;
+  padding: 20px;
+  border: 1px solid #A32CDA;
+  border-radius: 8px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  flex: 0 1 calc(33% - 15px); /* Responsive width for three boxes per row */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .tech-box {
+    flex: 0 1 calc(50% - 15px); /* Two boxes per row for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .right-side {
+    flex-basis: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 0; /* Remove left padding on mobile */
+    padding-right: 0; /* Remove right padding on mobile */
+  }
+
+  .tech-items {
+    flex-direction: column; /* Stack technology items */
+  }
+
+  .tech-box {
+    margin-bottom: 10px;
+    width: 100%; /* Full width on mobile */
+  }
+
+  .service h4 {
+    font-size: 18px;
+  }
+
+  .service p {
+    font-size: 14px;
+  }
+}
+
+.service {
+  margin-bottom: 3rem;
+  font-size: 20px;
+}
+
+.service h4 {
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.service-divider {
+  border: none;
+  height: 0.5px;
+  background-color: #ffffff;
+  margin: 10px 0;
+}
+
+.service p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.highlight {
+  color: #A32CDA;
+}

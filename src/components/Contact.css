@@ -1,0 +1,251 @@
+.contact {
+  margin: 0 auto;
+  padding: 40px;
+  max-width: 1200px;
+  color: white;
+}
+
+.contact h2 {
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contact-divider {
+  border: 1px solid #999;
+  margin-bottom: 40px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact-left {
+  flex-basis: 50%;
+  padding-left: 5rem;
+}
+
+.contact-left h3 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #A32CDA;
+  font-weight: bold;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center; /* Aligns icon and text vertically */
+}
+
+/* For SVG icons */
+.contact-box svg {
+  fill: white; /* Set the fill color of the SVG to white */
+  width: 20px; /* Adjust size if needed */
+  height: 20px; /* Adjust size if needed */
+  margin-right: 10px; /* Space between icon and text */
+}
+
+/* When hovering over the contact-box, keep icon color white */
+.contact-box:hover svg {
+  fill: white; /* Ensure the icon remains white on hover */
+}
+
+
+.contact-info i {
+  margin-right: 10px;
+  color: #A32CDA;
+}
+
+.contact-box{
+  padding: 1.1rem 1.2rem;
+  user-select: none;
+  transition: color 0.4s ease, border 0.2s ease; /* More specific transitions */
+}
+
+.contact-box:hover{
+  display: inline-block;
+  background-color: rgba(100, 25, 135, 0.5);
+  color: #ffffff;
+  padding: 1rem 1.2rem;
+  border: 1px solid #A32CDA;
+  border-radius: 8px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+
+.contact-right {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.contact-form {
+  width: 100%;
+  padding: 2rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: left; /* Ensures form content aligns to the left */
+
+}
+
+.contact-form h4 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #121212;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 2px solid #d9d9d9;
+  background-color: #ffff;
+  color: #121212;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: none;
+  outline: none;
+  border-bottom:2px solid #A32CDA;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999;
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Button adjustments */
+.btn-send {
+  background-color: #A32CDA;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto; /* Shortens the button */
+  min-width: 150px; /* Ensures minimum size for readability */
+  text-align: left; /* Aligns it to the left */
+  margin-top: 20px; /* Adds spacing above */
+}
+
+.btn-send i {
+  margin-right: 10px;
+}
+
+.btn-send:hover {
+  background-color: #8d23b3;
+}
+
+.btn-send svg {
+  margin-right: 10px; /* Add space between the icon and text */
+  fill: white;
+}
+
+/*links*/
+
+.contact-left a{
+color: #ffffff;
+text-decoration: none;
+}
+
+/*Responsiveness*/
+
+/* Mobile (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+  .contact-content {
+    flex-direction: column; /* Stack left and right sections */
+    align-items: center; /* Center-align sections */
+    padding: 0; /* Remove extra padding */
+  }
+
+  .contact-left {
+    flex-basis: 100%;
+    padding-left: 0;
+    text-align: center; /* Center-align text */
+    margin-bottom: 20px;
+  }
+
+  .contact-right {
+    flex-basis: 100%;
+    padding: 10px; /* Adjust padding for mobile */
+    width: 100%;
+  }
+
+  .contact-form {
+    padding: 1rem; /* Reduce padding on form */
+  }
+
+  .btn-send {
+    width: 100%; /* Make the button span the full width */
+    justify-content: center; /* Center-align button text */
+    padding: 10px 20px; /* Adjust padding */
+  }
+
+  .contact h2 {
+    font-size: 48px; /* Smaller font size for heading */
+  }
+
+  .contact-left h3 {
+    font-size: 36px; /* Smaller font size for sub-heading */
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+  .contact h2 {
+    font-size: 36px; /* Even smaller heading size */
+  }
+
+  .contact-left h3 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px; /* Smaller input padding */
+    font-size: 0.9rem; /* Smaller font size */
+  }
+
+  .btn-send {
+    font-size: 1rem; /* Smaller button text */
+    padding: 10px 15px; /* Adjust padding */
+  }
+
+  .contact-box {
+    font-size: 1rem; /* Adjust contact info font size */
+  }
+}

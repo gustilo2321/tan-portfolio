@@ -1,0 +1,139 @@
+
+
+/* Navbar is fixed to the top of the page */
+.navbar {
+    position: fixed;  /* Fixes the navbar to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #121212; /* Same background color as before */
+    display: flex;
+    justify-content: space-between; /* Space between logo and hamburger */
+    align-items: center;
+    padding: 35px 30px;
+    user-select: none;
+    z-index: 1000; /* Ensures it's always on top */
+  }
+  
+  /* Fix the logo and text to the top left of the page */
+  .navbar-logo {
+    position: fixed; /* Keeps the logo at the top left even when scrolling */
+    top: 30px; /* Adjust for some vertical space from the top */
+    left: 5rem; /* Horizontal space from the left */
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    z-index: 1001; /* Ensure it's above the rest of the content */
+  }
+  
+
+/* Styling for the menu button */
+.menu-btn {
+    position: fixed;
+    top: 30px;
+    right: 20px; /* Positioning the menu button on the right side */
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* Ensure the menu button is always above the content */
+}
+
+.menu-btn__burger {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.menu-btn__burger::before, .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-10px);
+}
+
+.menu-btn__burger::after {
+    transform: translateY(10px);
+}
+
+/* Styles for popup navigation */
+.nav-popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column; /* Make the nav items vertical */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.nav-popup ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+/* Adjusted margin for vertical spacing */
+.nav-popup ul li {
+    margin: 2rem 0; /* Vertical margin of 2rem for comfortable spacing */
+}
+
+.nav-popup ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect to change color */
+.nav-popup ul li a:hover {
+    color: #A32CDA; 
+}
+
+/* Styles for showing the menu */
+.nav-popup.show {
+    display: flex; /* Show the menu in a vertical orientation */
+}
+
+/* Style for the logo and Ethan text */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logo img {
+    height: 40px;
+    margin-right: 10px; /* Space between logo and text */
+   
+  }
+
+/* Animations for opening and closing the menu */
+.menu-btn.open .menu-btn__burger {
+    transform: rotate(45deg);
+}
+
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(-90deg) translateX(-10px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+    opacity: 0;
+}

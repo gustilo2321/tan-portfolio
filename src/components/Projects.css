@@ -1,0 +1,172 @@
+/* Projects.css */
+
+/* General styling for the projects section */
+.projects {
+  padding: 40px;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.projects h2 {
+  font-size: 64px;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.projects-divider {
+  border: none;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 20px 0;
+}
+
+/* Photography Section Styling */
+.photography-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.main-photo img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.side-photos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.side-photos img {
+  width: 100%;
+  max-width: 370px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Project Section Styling */
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.project-left{
+  user-select: none;
+}
+
+.project-left,
+.project-right {
+  flex-basis: 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.project h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.project p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.p-desc{
+  color: #A32CDA;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* For tablets and smaller */
+@media (max-width: 768px) {
+  .projects h2 {
+    font-size: 48px;
+  }
+
+  .projects {
+    padding: 20px;
+  }
+
+  .photography-section {
+    flex-direction: column; /* Stack photos vertically */
+    align-items: center;
+  }
+
+  .main-photo img,
+  .side-photos img {
+    max-width: 100%;
+  }
+
+  .side-photos {
+    flex-direction: row;
+  }
+
+  .side-photos img {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .project {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-left,
+  .project-right {
+    flex-basis: 100%;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .project-image {
+    max-width: 100%;
+  }
+
+  .project h3 {
+    font-size: 22px;
+  }
+
+  .project p {
+    font-size: 14px;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .projects h2 {
+    font-size: 36px;
+  }
+
+  .photography-section {
+    gap: 10px;
+  }
+
+  .project h3 {
+    font-size: 20px;
+  }
+
+  .project p {
+    font-size: 12px;
+  }
+}
